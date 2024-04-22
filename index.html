@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ambient</title>
+    <title>Exercises</title>
   <style>
     #ambient {
+      z-index: -1;
       width: 50vh;
       height: 50vh;
       top: 50vh;
@@ -55,13 +56,48 @@
         box-shadow: 10px 10px 20px rgb(108, 255, 253);
       }
     }
+
+    #links {
+      z-index: 2;
+      top: 50vh;
+      left: 50vw;
+      position: fixed;
+      font-size:48px;
+      transform: translate(-50%, -50%);
+      font-family: SpaceGrotesk;
+    }
+
+    a {
+      color: white;
+    }
+
+
+    /* mouse over link */
+    a:hover {
+      background-color: hotpink;
+    }
+
+    @font-face {
+      font-family: SpaceGrotesk;
+      src: url('SpaceGrotesk-VariableFont_wght.ttf');
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="circle" id="ambient">
+  <div class="circle" id="ambient"></div>
+  <div id="links">
+    <a href="ambient.html" target="_blank">ambient</a><br>
+    <a href="enzo.html" target="_blank">enzo remix</a><br>
+    <a href="Input-Output.html" target="_blank">i/o</a><br>
+    <a href="Keyboard-instrument.html" target="_blank">keyboard</a><br>
+    <a href="website-as.html" target="_blank">website-as</a><br>
+    <a href="google-sheet-cms/index.html" target="_blank">cms</a><br>
+
+
   </div>
+
 
 </body>
 
