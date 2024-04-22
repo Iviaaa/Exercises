@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://2023.software-for-people.net/demos/input_output/checkboxes/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Input-Output</title>
+    <link rel="stylesheet" href="./Input-Output_files/styles.css">
+</head>
+
+<body>
+
+    <!-- Set up your checkboxes in HTML.-->
+    <!-- Give each one an ID. -->
+    <!-- By default, they're all checked -->
+    <div id="colorcontainre" style="z-index:1;">
+    <input type="color" id="left" name="left" value="#e66465" />
+    <label for="left">left</label>
+        
+    <input type="color" id="middle" name="middle" value="#e66465" />
+    <label for="middle">middle</label>
+
+    <input type="color" id="right" name="right" value="#e66465" />
+    <label for="right">right</label>
+    
+    </div>
+    <!-- Elements to filter -->
+    <!-- Each element has a class that is a color, which
+    corresponds to the check boxes. These classes-red, blue, and green-are how we'll filter the elements. -->
+    <div class="container">
+        <div class="blue" style="display: inline-block;"></div>
+        <div class="red" style="display: inline-block;"></div>
+        <div class="green" style="display: inline-block;"></div>
+    </div>
+
+    <!-- And here's a link to our javascript, written in an external js file called main.js -->
+    <script src="./Input-Output_files/main.js"></script>
+
+
+</body></html>

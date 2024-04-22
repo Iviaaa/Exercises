@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #ambient {
+      width: 50vh;
+      height: 50vh;
+      top: 50vh;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      position: fixed;
+      background-color: rgb(157, 255, 148);
+      filter: blur(1rem);
+      border-radius: 50%;
+      box-shadow: 10px 10px 20px rgb(108, 255, 253);
+      animation-name: example;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes example {
+      0% {
+        background-color: rgb(108, 255, 253);
+        box-shadow: 10px 20px 10px rgb(255, 221, 86);
+      }
+
+      20% {
+        background-color: rgb(255, 221, 86);
+        box-shadow: 20px 10px 10px rgb(148, 150, 255);
+      }
+
+      40% {
+        background-color: rgb(148, 150, 255);
+        box-shadow: 10px 10px -20px rgb(255, 117, 211);
+      }
+
+      60% {
+        background-color: rgb(219, 148, 255);
+        box-shadow: 10px -20px 10px rgb(255, 86, 86);
+      }
+
+      80% {
+        background-color: rgb(255, 86, 86);
+        box-shadow: -20px 10px 10px rgb(157, 255, 148);
+      }
+
+      100% {
+        background-color: rgb(157, 255, 148);
+        box-shadow: 10px 10px 20px rgb(108, 255, 253);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="circle" id="ambient">
+  </div>
+
+</body>
+
+</html>

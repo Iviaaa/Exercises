@@ -1,0 +1,41 @@
+* {
+  font-family: SpaceGrotesk;
+}
+
+fieldset {
+  border: 1px solid black;
+  margin: 0px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+}
+
+.honeypot-field {
+  display: none;
+}
+
+.form-elements {
+  border: 1px solid black;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+.Timestamp {
+  display: none;
+}
+
+.name{
+ color: orchid;
+}
+.age{
+  color:olivedrab;
+}
+.message{
+  color: rgb(63, 36, 3);
+  font-weight: bold;
+}
+@font-face { font-family: SpaceGrotesk; src: url('../SpaceGrotesk-VariableFont_wght.ttf'); } 

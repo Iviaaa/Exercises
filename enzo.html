@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Letters</title>
+    <style>
+        img {
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        img:hover {
+            filter: hue-rotate(90deg);
+        }
+
+        div {
+            display:inline-block;
+        }
+        .credit{
+            font-size: 48px;
+            font-family: SpaceGrotesk;
+        }
+        #clicker{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left:0;
+        }
+        @font-face { font-family: SpaceGrotesk; src: url('SpaceGrotesk-VariableFont_wght.ttf'); } 
+
+    </style>
+</head>
+
+<body>
+    <div class="credit">This website is based on the design of the <a href="https://enzomari.com/">Enzo Mari archive</a> by <a href="https://jon-l.com/">Jon Lucas</a>.</div>
+    <div id="clicker"></div>
+    <script>
+        // define your "batch of images" in an array
+       var images = [
+                "<img src='images/A.png'>",
+                "<img src='images/B.png'>",
+                "<img src='images/C.png'>",
+                "<img src='images/D.png'>",
+                "<img src='images/E.png'>",
+                "<img src='images/F.png'>",
+                "<img src='images/G.png'>",
+                "<img src='images/H.png'>",
+                "<img src='images/I.png'>",
+                "<img src='images/J.png'>",
+                "<img src='images/K.png'>",
+                "<img src='images/L.png'>",
+                "<img src='images/M.png'>",
+                "<img src='images/N.png'>",
+                "<img src='images/O.png'>",
+                "<img src='images/P.png'>",
+                "<img src='images/Q.png'>",
+                "<img src='images/R.png'>",
+                "<img src='images/S.png'>",
+                "<img src='images/T.png'>",
+                "<img src='images/U.png'>",
+                "<img src='images/V.png'>",
+                "<img src='images/W.png'>",
+                "<img src='images/X.png'>",
+                "<img src='images/Y.png'>",
+                "<img src='images/Z.png'>",
+            ]
+
+        // this function randomly picks an image from the batch
+        function random_image() {
+            return Math.floor(Math.random() * images.length);
+        }
+
+        // this function adds the randomly-selected image to the page
+        function add_image() {
+
+            // first you make a new div for the image.
+            var new_image = document.createElement('div');
+
+            // then you set the div's inner-HTML, ie its content, to the chosen img tag
+            new_image.innerHTML = images[random_image()];
+
+            // these two lines pick a random width for the image.
+            // 300 is the MAX width, and 100 is the MIN width.
+            var random_width = Math.floor(Math.random() * (300 - 100 + 1) + 100);
+            var random_width_pixels = random_width + "px";
+
+            // assign that random width to the new image
+            new_image.style.width = random_width_pixels;
+
+            // add the new image to the document's body (so it's visible!)
+            document.body.prepend(new_image);
+
+        }
+        var clicker = document.getElementById('clicker');
+        clicker.addEventListener('click', add_image);
+        // so that the first image appears when the page load, run the function once.
+        add_image();
+    </script>
+</body>
+
+</html>

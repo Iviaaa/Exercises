@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keyboard Instrument</title>
+  <style>
+    *{
+      font-size: 48px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    #key_display {
+      color: orangered;
+    }
+  </style>
+</head>
+
+<body>
+  <div>Typewriter<br><span id="key_display"></span></div>
+  <audio id="audio" controls style="display:none">
+    <source src="12572.wav" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts go at the bottom of your <body> element, below your HTML.-->
+  <script>
+    let display = document.getElementById("key_display");
+    document.body.onkeydown = function (keypress_event) {
+      var key = keypress_event.key;
+      var str = display.textContent;
+
+      if (key === "Backspace") {
+        str = str.substring(0, str.length - 1);
+        display.textContent = str;
+      }
+      else if (key === "Enter" || key === "Tab") {
+        str += ` `;
+        display.textContent = str;
+      }
+      else {
+        str += key;
+        display.textContent = str;
+      }
+      document.getElementById('audio').play();
+    };
+  </script>
+</body>
+
+</html>
